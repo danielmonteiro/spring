@@ -9,7 +9,15 @@
 
 
     <!-- Define your beans here -->
-	<bean id="myCoach" class="io.test.spring.BaseballCoach"></bean>
+	<bean id="myCoach" class="io.test.spring.SoccerCoach">
+        <constructor-arg ref="myFortuneService"></constructor-arg>
+    </bean>
+
+    <bean id="basketballCoach" class="io.test.spring.BaseballCoach">
+        <property name="service" ref="myFortuneService"></property>
+    </bean>
+
+    <bean id="myFortuneService" class="io.test.spring.HappyFortuneService"></bean>
 
 </beans>
 
