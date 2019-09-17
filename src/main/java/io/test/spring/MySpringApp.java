@@ -8,9 +8,17 @@ public class MySpringApp {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach coach = context.getBean("basketballCoach", Coach.class);
+        SoccerCoach coach = context.getBean("myCoach", SoccerCoach.class);
+        SoccerCoach coach2 = context.getBean("myCoach", SoccerCoach.class);
 
         System.out.println(coach.getDailyWorkout());
+        System.out.println(coach2.getDailyWorkout());
+
+        coach2.setEmail("new@email.com");
+
+        System.out.println(" -------------------------------- ");
+        System.out.println(coach.getDailyWorkout());
+        System.out.println(coach2.getDailyWorkout());
 
         context.close();
     }
