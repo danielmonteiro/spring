@@ -6,10 +6,10 @@ public class Main {
 
   public static void main(String[] args) {
 
-    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigComponentScan.class);
 
-    Bean bean = context.getBean("bean", Bean.class);
-    System.out.println(bean.getBeanName());
+    BeanComponentScan beanComponentScan = context.getBean("beanComponentScan", BeanComponentScan.class);
+    System.out.println(beanComponentScan.getBeanName());
 
     context.close();
   }

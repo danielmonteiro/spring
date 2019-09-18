@@ -10,18 +10,18 @@
     <context:property-placeholder location="app.properties"></context:property-placeholder>
 
     <!-- Define your beans here -->
-	  <bean id="myCoach" class="io.test.spring.SoccerCoach">
+	  <beanComponentScan id="myCoach" class="io.test.spring.SoccerCoach">
         <constructor-arg ref="myFortuneService"></constructor-arg>
         <constructor-arg value="Name!!!"></constructor-arg>
         <constructor-arg value="Surname!!!"></constructor-arg>
         <property name="email" value="${foo.email}"></property>
-    </bean>
+    </beanComponentScan>
 
-    <bean id="basketballCoach" class="io.test.spring.BaseballCoach">
+    <beanComponentScan id="basketballCoach" class="io.test.spring.BaseballCoach">
         <property name="service" ref="myFortuneService"></property>
-    </bean>
+    </beanComponentScan>
 
-    <bean id="myFortuneService" class="io.test.spring.HappyFortuneService"></bean>
+    <beanComponentScan id="myFortuneService" class="io.test.spring.HappyFortuneService"></beanComponentScan>
 
 </beans>
 

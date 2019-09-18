@@ -8,8 +8,8 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-	  <bean id="lifecycle" class="io.test.spring.lifecycle.Lifecycle" init-method="initMethod" destroy-method="destroyMethod">
-    </bean>
+	  <beanComponentScan id="lifecycle" class="io.test.spring.lifecycle.Lifecycle" init-method="initMethod" destroy-method="destroyMethod">
+    </beanComponentScan>
 
 </beans>
 

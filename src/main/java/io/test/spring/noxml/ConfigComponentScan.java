@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("io.test.spring.noxml")
-public class Config {
+public class ConfigComponentScan {
 }

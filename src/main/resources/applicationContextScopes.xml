@@ -8,13 +8,13 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-	  <bean id="singleton" class="io.test.spring.scopes.SingletonScope">
+	  <beanComponentScan id="singleton" class="io.test.spring.scopes.SingletonScope">
         <property name="email" value="first@email.com"></property>
-    </bean>
+    </beanComponentScan>
 
-	  <bean id="prototype" class="io.test.spring.scopes.PrototypeScope" scope="prototype">
+	  <beanComponentScan id="prototype" class="io.test.spring.scopes.PrototypeScope" scope="prototype">
         <property name="email" value="prototype@email.com"></property>
-    </bean>
+    </beanComponentScan>
 
 
 </beans>
